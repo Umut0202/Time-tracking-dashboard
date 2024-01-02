@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: hsl(226, 43%, 10%);
+  color: #fafafa;
+}
+
+img {
+  width: 30%;
+  height: auto;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "user-card work-card play-card study-card"
+    "user-card exercise-card social-card selfcare-card";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 60%;
+  margin: 10% auto auto;
+  gap: 3rem;
+}
+
+.user-card {
+  grid-area: user-card;
+}
+
+#user-card-top {
+  position: relative;
+  border-radius: 1.5rem;
+  height: 75%;
+  font-size: 4rem;
+  background-color: hsl(235, 45%, 61%);
+  padding: 0.75em;
+  z-index: 2;
+}
+
+#user-card-top span {
+  display: block;
+}
+
+.report-for {
+  color: hsl(263, 66%, 86%);
+  font-size: 1.8rem;
+}
+
+#user-card-bottom {
+  position: relative;
+  height: 30%;
+  top: -2.5rem;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1.6rem;
+  padding: 2em 2em 1em 2em;
+  font-size: 1.5rem;
+}
+
+#user-card-bottom p:hover {
+  color: hsl(263, 66%, 86%);
+}
+
+.grid-item-parent {
+  border-radius: 1.6rem;
+}
+
+svg {
+  float: right;
+}
+
+.grid-item {
+  position: relative;
+  background-color: hsl(235, 46%, 20%);
+  height: 81%;
+  bottom: -20%;
+  border-radius: 1.4rem;
+}
+
+.grid-item-row1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0 1em;
+}
+
+.grid-item-row2 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 2.5em;
+}
+
+.grid-item-row2 p span {
+  font-size: 1.4rem;
+  display: block;
+  color: hsl(0, 0%, 71%);
+  margin-top: 25px;
+}
+
+.icon {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+
+.work-card {
+  position: relative;
+  grid-area: work-card;
+  background-color: hsl(15, 100%, 70%);
+}
+
+.play-card {
+  position: relative;
+  grid-area: play-card;
+  background-color: hsl(195, 74%, 62%);
+}
+
+.study-card {
+  position: relative;
+  grid-area: study-card;
+  background-color: hsl(348, 100%, 68%);
+}
+
+.exercise-card {
+  position: relative;
+  grid-area: exercise-card;
+  background-color: hsl(145, 58%, 55%);
+}
+
+.social-card {
+  position: relative;
+  grid-area: social-card;
+  background-color: hsl(264, 64%, 52%);
+}
+
+.selfcare-card {
+  position: relative;
+  grid-area: selfcare-card;
+  background-color: hsl(43, 84%, 65%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 10px;
+}
+.attribution a {
+  color: #ccccff; /*hsl(228, 45%, 44%); */
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "user-card"
+      "work-card"
+      "play-card"
+      "study-card"
+      "exercise-card"
+      "social-card"
+      "selfcare-card";
+
+    width: 90%;
+  }
+
+  #user-card-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+  }
+}
+
+/* #user-card-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+} */
